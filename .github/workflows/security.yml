@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install docker
-        run: apt-get install docker -y
+        run: sudo apt-get install docker -y
 
       - name: Build docker image
         run: docker image build -t pygoat-image .
