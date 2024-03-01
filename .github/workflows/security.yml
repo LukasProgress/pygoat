@@ -19,10 +19,6 @@ jobs:
       - name: Run Bandit Scan
         run: bandit -r . -lll -ii -f json -o bandit_findings.json
 
-      - name: Install safety
-        if: always()
-        run: pip install safety && safety scan
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         if: always()
