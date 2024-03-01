@@ -21,7 +21,7 @@ jobs:
 
       - name: Install safety
         if: always()
-        run: pip install safety -y && safety scan
+        run: pip install safety && safety scan
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
