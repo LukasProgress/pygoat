@@ -39,6 +39,14 @@ jobs:
       - name: Build docker image
         run: docker image build -t pygoat-image .
 
+      - name: Docker Scout Scan
+        uses: docker/scout-action@v1.5.0
+        with:
+          dockerhub-user: ${{ DOCKERHUB_USER }}
+          dockerhub-password: ${{ DOCKERHUB_TOKEN }}
+
+      
+
       
       
 
