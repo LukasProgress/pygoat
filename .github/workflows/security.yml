@@ -49,6 +49,7 @@ jobs:
         uses: docker/scout-action@v1.5.0
         with:
           command: quickview, cves
+          only-severities: critical
           
 
       
